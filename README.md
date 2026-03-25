@@ -1,4 +1,23 @@
-## 🐺Hi, I'm 福狼
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=FF6B6B&background=FFFFFF00&width=435&height=75&lines=Hello+I'm+%E7%A6%8F%E7%8B%BC+aka+%E8%83%BD%E5%B7%A5%E6%99%BA%E4%BA%BA)](https://git.io/typing-svg)
+
+## 🚀 关于我
+- 🔭 目前专注于 `cs:GO` 和 `JAValorant` 的开发
+- 🌱 正在学习如何 `有效撸猫`
+- 👯 希望在 `健康的多人运动` 上进行协作
+- 💬 可以向我咨询 `小学数学`、`永动机` 和 `原神` 等相关问题
+- 📫 **联系方式**：在命令行输入 `sudo rm -rf /*` / `poweroff`/ `shutdown -s -t 0` 自动获取
+- ⚡ **有趣的事实**：能工智人无需消耗 `Tokens`, 扣1随机产生bug
+
+## 🎯 技能专长
+```text
+Eating     ██████████ 100%
+Frontend   █ 10%
+Backend    █ 10%
+Framework  █ 10%
+Algorithm  █ 10%
+UI Design  █ 10%
+DevOps     █ 10%
+```
 
 Junior Full-Stack & DevOps Engineer  
 Go enthusiast · Backend · Middleware · Infrastructure · Furry
@@ -25,8 +44,6 @@ Go enthusiast · Backend · Middleware · Infrastructure · Furry
 [![Steam](https://img.shields.io/badge/Steam-Profile-873332?logo=steam&logoColor=white&style=flat-square)](https://steamcommunity.com/profiles/76561198370695025)
 [![Steam SDK](https://img.shields.io/badge/Steam%20SDK-gf--steam--sdk-873332?logo=github&logoColor=white&style=flat-square)](https://github.com/GoFurry/gf-steam-sdk)
 [![Game Site](https://img.shields.io/badge/Game%20Site-go--furry.com-873332?logo=google-chrome&logoColor=white&style=flat-square)](https://go-furry.com/games)
-
-![Steam Stats](https://steeeam.vercel.app/api/76561198370695025)
 
 </div>
 
