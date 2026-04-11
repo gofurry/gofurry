@@ -29,16 +29,9 @@ Go enthusiast · Backend · Middleware · Infrastructure · Furry
 ### 📊 GitHub Stats
 
 <p align="center">
-  <span style="display:inline-block; margin-right:10px;">
-    <img src="https://github-readme-stats.vercel.app/api?username=GoFurry&show_icons=true&bg_color=0d1117&title_color=ff9f1c&icon_color=ff9f1c&text_color=c9d1d9&border_color=30363d" />
+  <span style="display:inline-block;">
+    <img src="https://github-readme-stats-opal-alpha-76.vercel.app/api?username=GoFurry&show_icons=true&theme=gruvbox" />
   </span>
-  <span style="display:inline-block; margin-left:10px;">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GoFurry&layout=compact&bg_color=0d1117&title_color=ff9f1c&text_color=c9d1d9&border_color=30363d" />
-  </span>
-</p>
-
-<p align="center">
-  <img src="https://activity-graph.herokuapp.com/graph?username=GoFurry&bg_color=0d1117&color=ff9f1c&line=ff9f1c&point=c9d1d9&area=true&hide_border=true" />
 </p>
 
 
