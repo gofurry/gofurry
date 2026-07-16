@@ -10,112 +10,20 @@
 
 ---
 
-### 🐺 Featured Project: GoFurry
+### [🐺GoFurry](https://go-furry.com) — Furry website directory and Steam game discovery platform
 
-A production-oriented furry culture discovery platform built and maintained as a real multi-service web system.
+One of the largest furry-focused website directories, alongside a dedicated discovery and information platform for furry games on Steam.
 
-<table align="left" width="45%">
-  <tr>
-    <th colspan="2" align="center">Engineering Scope</th>
-  </tr>
-  <tr>
-    <th width="28%">Scope</th>
-    <th width="72%">Highlights</th>
-  </tr>
-  <tr>
-    <td><strong>Architecture</strong></td>
-    <td>
-      Nuxt 4 public frontend<br>
-      Go/Fiber APIs<br>
-      Admin dashboard<br>
-      Data collectors
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Data</strong></td>
-    <td>
-      Furry site navigation<br>
-      Steam intelligence<br>
-      Ranking/detail/update pages
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Infrastructure</strong></td>
-    <td>
-      Docker deployment<br>
-      Nginx reverse proxy<br>
-      PGVector / Redis / Ollama<br>
-      Production scripts
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Engineering</strong></td>
-    <td>
-      Vue SPA → Nuxt SSR migration<br>
-      SEO pages<br>
-      Service separation<br>
-      Experimental RAG
-    </td>
-  </tr>
-</table>
+1M+ deduplicated visits and 100K+ community video views. Curates furry websites, Steam games, rankings, release updates, performance data, and community resources.
 
-<table align="right" width="45%">
-  <tr>
-    <th colspan="2" align="center">Production Data</th>
-  </tr>
-  <tr>
-    <th width="32%">Area</th>
-    <th width="68%">Result</th>
-  </tr>
-  <tr>
-    <td><strong>Traffic</strong></td>
-    <td>
-      1M+ daily-IP<br>
-      deduplicated visits
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Community<br>Reach</strong></td>
-    <td>
-      100K+ furry-community<br>
-      video views
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Performance</strong></td>
-    <td>
-      Hot pages cached<br>
-      scheduled refresh<br>
-      Site-wide APIs P99 &lt; 100ms
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Security</strong></td>
-    <td>
-      Coraza WAF<br>
-      Tencent Cloud CDN / COS<br>
-      10M+ probe events retained
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Operations</strong></td>
-    <td>
-      Production deployment<br>
-      Cache refresh<br>
-      Access analysis<br>
-      Service monitoring
-    </td>
-  </tr>
-</table>
-
-<br clear="both" />
+Built and operated as a production multi-service system with Nuxt, Go/Fiber, PostgreSQL, Redis, Nginx, and Docker. Site-wide API P99 remains below 100ms, with more than 10M security and probe events processed.
 
 ### 🧰 Tech Stack
 
 #### 🔹 Proficient Languages & Backend
 ![Languages](https://skillicons.dev/icons?i=go,sqlite,postgres,nginx,redis,mongodb,kafka,elasticsearch)
 #### 🔹 Frontend
-![Frontend](https://skillicons.dev/icons?i=vue,angular,tailwind,pinia,ts)
+![Frontend](https://skillicons.dev/icons?i=react,vue,angular,tailwind,pinia,ts)
 #### 🔹 Operations
 ![Operations](https://skillicons.dev/icons?i=debian,docker,ansible,prometheus,grafana)
 
