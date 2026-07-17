@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">&#31119;&#29436;'s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 151, Total Commits  (last year) : 859, Total PRs: 52, Total Issues: 44, Contributed to (last year): 4</desc>
+        <title id="titleId">Faolan Grey's GitHub Stats, Rank: A-</title>
+        <desc id="descId">Total Stars Earned: 151, Total Commits  (last year) : 860, Total PRs: 52, Total Issues: 45, Contributed to (last year): 4</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 86.73220085080642;
+        stroke-dashoffset: 86.5523922485898;
       }
     }
   
@@ -126,7 +126,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >&#31119;&#29436;'s GitHub Stats</text>
+      >Faolan Grey's GitHub Stats</text>
     </g>
       </g>
     
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >859</text>
+      >860</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >44</text>
+      >45</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
