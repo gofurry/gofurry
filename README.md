@@ -21,10 +21,15 @@ Built and operated as a production multi-service system with Nuxt, Go/Fiber, Pos
 ### 🧰 Tech Stack
 
 #### 🔹 Proficient Languages & Backend
+
 ![Languages](https://skillicons.dev/icons?i=go,sqlite,postgres,nginx,redis,mongodb,kafka,elasticsearch)
+
 #### 🔹 Frontend
+
 ![Frontend](https://skillicons.dev/icons?i=react,vue,angular,tailwind,pinia,ts)
+
 #### 🔹 Operations
+
 ![Operations](https://skillicons.dev/icons?i=debian,docker,ansible,prometheus,grafana)
 
 ### 🎮 Steam
@@ -45,14 +50,16 @@ Built and operated as a production multi-service system with Nuxt, Go/Fiber, Pos
   <img src="./profile/top-langs.svg" height="165" />
 </p>
 
-
 ## 🐲 Other Stats
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=gofurry&bg_color=504945&color=d4be98&line=d8a657&point=e78a4e&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+<p align="center">
+  <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
+    <img src="./profile/activity.svg" alt="GitHub Activity Graph" />
+  </a>
+</p>
 
 ---
 
 ### 📫 Contact Me
-- Email: `2660621624@qq.com` 
 
-
+- Email: `2660621624@qq.com`
