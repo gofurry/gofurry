@@ -50,12 +50,10 @@ Built and operated as a production multi-service system with Nuxt, Go/Fiber, Pos
   <img src="./profile/top-langs.svg" height="165" />
 </p>
 
-## 🐲 Other Stats
+## 🌈 Contributions
 
 <p align="center">
-  <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
-    <img src="./profile/activity.svg" alt="GitHub Activity Graph" />
-  </a>
+  <img src="./profile/night-rainbow.svg" alt="GitHub 3D Contribution Calendar" />
 </p>
 
 ---
