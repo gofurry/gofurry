@@ -2,10 +2,9 @@ name: Update README cards
 
 on:
   schedule:
-    # 每天 UTC 03:00 执行
+    # UTC 03:00 / UTC+8 11:00
     - cron: "0 3 * * *"
 
-  # 允许手动触发
   workflow_dispatch:
 
 permissions:
@@ -16,11 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ------------------------------------------------------------
+      # Checkout
+      # ------------------------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v6
 
       - name: Prepare profile directory
         run: mkdir -p profile
+
+      # ------------------------------------------------------------
+      # GitHub Stats
+      # ------------------------------------------------------------
 
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2.0.2
@@ -31,6 +38,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
+      # ------------------------------------------------------------
+      # Top Languages
+      # ------------------------------------------------------------
+
       - name: Generate top languages card
         uses: stats-organization/github-readme-stats-action@v2.0.2
         with:
@@ -40,60 +51,53 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate activity graph
+      # ------------------------------------------------------------
+      # 3D Contribution Calendar
+      # Night Rainbow
+      # ------------------------------------------------------------
+
+      - name: Generate 3D contribution calendar
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: gofurry
+
+      - name: Keep Night Rainbow version
         shell: bash
         run: |
-          set -u
+          set -euo pipefail
 
-          url="https://github-readme-activity-graph.vercel.app/graph?username=gofurry&bg_color=504945&color=d4be98&line=d8a657&point=e78a4e&area=true&hide_border=true"
+          source_file="profile-3d-contrib/profile-night-rainbow.svg"
+          target_file="profile/night-rainbow.svg"
 
-          tmp="$(mktemp)"
-
-          echo "Downloading GitHub activity graph..."
-
-          if curl \
-            --fail \
-            --silent \
-            --show-error \
-            --location \
-            --retry 3 \
-            --retry-delay 5 \
-            --retry-all-errors \
-            "$url" \
-            --output "$tmp"; then
-
-            if grep -q "<svg" "$tmp"; then
-              mv "$tmp" profile/activity.svg
-              echo "Activity graph updated successfully."
-            else
-              rm -f "$tmp"
-              echo "::warning::Activity graph response is not a valid SVG."
-
-              if [ ! -f profile/activity.svg ]; then
-                echo "::error::No previous activity.svg exists."
-                exit 1
-              fi
-            fi
-
-          else
-            rm -f "$tmp"
-            echo "::warning::Failed to download activity graph."
-
-            if [ ! -f profile/activity.svg ]; then
-              echo "::error::No previous activity.svg exists."
-              exit 1
-            fi
-
-            echo "Keeping previous profile/activity.svg."
+          if [ ! -f "$source_file" ]; then
+            echo "::error::Night Rainbow contribution SVG was not generated."
+            exit 1
           fi
 
-      - name: Commit cards
+          cp "$source_file" "$target_file"
+
+          # We only want the Night Rainbow version in the repository.
+          rm -rf profile-3d-contrib
+
+          echo "Night Rainbow contribution calendar generated successfully."
+
+      # ------------------------------------------------------------
+      # Commit generated SVG files
+      # ------------------------------------------------------------
+
+      - name: Commit README cards
         shell: bash
         run: |
+          set -euo pipefail
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile/*.svg
+          git add \
+            profile/stats.svg \
+            profile/top-langs.svg \
+            profile/night-rainbow.svg
 
           if git diff --cached --quiet; then
             echo "No README card changes."
