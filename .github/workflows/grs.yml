@@ -1,9 +1,11 @@
-# .github/workflows/grs.yml
 name: Update README cards
 
 on:
   schedule:
+    # 每天 UTC 03:00 执行
     - cron: "0 3 * * *"
+
+  # 允许手动触发
   workflow_dispatch:
 
 permissions:
@@ -14,13 +16,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Prepare profile directory
+        run: mkdir -p profile
 
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2.0.2
         with:
           card: stats
-          options: 'username=gofurry&show_icons=true&theme=gruvbox'
+          options: "username=gofurry&show_icons=true&theme=gruvbox"
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -29,15 +35,70 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2.0.2
         with:
           card: top-langs
-          options: 'username=gofurry&layout=compact&theme=gruvbox&langs_count=8'
+          options: "username=gofurry&layout=compact&theme=gruvbox&langs_count=8"
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
+      - name: Generate activity graph
+        shell: bash
+        run: |
+          set -u
+
+          url="https://github-readme-activity-graph.vercel.app/graph?username=gofurry&bg_color=504945&color=d4be98&line=d8a657&point=e78a4e&area=true&hide_border=true"
+
+          tmp="$(mktemp)"
+
+          echo "Downloading GitHub activity graph..."
+
+          if curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location \
+            --retry 3 \
+            --retry-delay 5 \
+            --retry-all-errors \
+            "$url" \
+            --output "$tmp"; then
+
+            if grep -q "<svg" "$tmp"; then
+              mv "$tmp" profile/activity.svg
+              echo "Activity graph updated successfully."
+            else
+              rm -f "$tmp"
+              echo "::warning::Activity graph response is not a valid SVG."
+
+              if [ ! -f profile/activity.svg ]; then
+                echo "::error::No previous activity.svg exists."
+                exit 1
+              fi
+            fi
+
+          else
+            rm -f "$tmp"
+            echo "::warning::Failed to download activity graph."
+
+            if [ ! -f profile/activity.svg ]; then
+              echo "::error::No previous activity.svg exists."
+              exit 1
+            fi
+
+            echo "Keeping previous profile/activity.svg."
+          fi
+
       - name: Commit cards
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+
+          if git diff --cached --quiet; then
+            echo "No README card changes."
+            exit 0
+          fi
+
+          git commit -m "Update README cards"
           git push
