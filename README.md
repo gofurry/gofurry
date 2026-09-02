@@ -22,15 +22,15 @@ Built and operated as a production multi-service system with Nuxt, Go/Fiber, Pos
 
 #### 🔹 Proficient Languages & Backend
 
-![Languages](https://skillicons.dev/icons?i=go,sqlite,postgres,nginx,mongodb,kafka,elasticsearch,rabbitmq,redis)
+![Languages](https://skillicons.dev/icons?i=go,sqlite,postgres,redis,nginx,mongodb,kafka,elasticsearch,rabbitmq,vscode)
 
 #### 🔹 Frontend
 
-![Frontend](https://skillicons.dev/icons?i=react,astro,scss,vite,angular,nuxtjs,vue,tailwind,pinia,pnpm,ts,vscode,less)
+![Frontend](https://skillicons.dev/icons?i=react,vue,nuxtjs,astro,angular,vite,tailwind,pinia,pnpm,scss,less,ts)
 
 #### 🔹 Operations
 
-![Operations](https://skillicons.dev/icons?i=debian,ansible,docker,k8s,gitlab,git,prometheus,grafana,cloudflare,sentry)
+![Operations](https://skillicons.dev/icons?i=debian,ansible,docker,k8s,gitlab,prometheus,grafana,cloudflare,sentry)
 
 ### 🎮 Steam
 
