@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Faolan Grey&#39;s GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 181, Total Commits  (last year) : 1678, Total PRs: 94, Total Issues: 133, Contributed to (last year): 7</desc>
+        <desc id="descId">Total Stars Earned: 181, Total Commits  (last year) : 1678, Total PRs: 94, Total Issues: 135, Contributed to (last year): 7</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 59.31472525658772;
+        stroke-dashoffset: 59.28644333423128;
       }
     }
   
@@ -214,7 +214,7 @@
         x="224.01"
         y="12.5"
         data-testid="issues"
-      >133</text>
+      >135</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
